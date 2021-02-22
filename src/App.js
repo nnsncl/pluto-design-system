@@ -1,9 +1,12 @@
 import React from 'react';
+import { GlobalStyle } from './utils';
+
 function App() {
   return (
-    <div>
-      Pluto
-    </div>
+    <>
+      <h1>Pluto</h1>
+      <GlobalStyle />
+    </>
   );
 }
 
