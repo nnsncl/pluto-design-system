@@ -7,6 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm run storybook`
+
+It will start Storybook locally and output the address. Depending on your system configuration, it will automatically open the address in a new browser tab.
+
 ### `yarn start`
 
 Runs the app in the development mode.\
