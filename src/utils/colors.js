@@ -15,7 +15,7 @@ export const primary = {
     },
     yellow: {
         100: '#FFD100',
-        10: 'FFEBC1'
+        10: '#FFEBC1'
     },
     red: {
         100: '#FF303A'
