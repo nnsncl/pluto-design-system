@@ -4,7 +4,7 @@ import Button from './Button';
 
 // eslint-disable-next-line
 export default {
-  title: 'Example/Button',
+  title: 'Atoms/Button',
   component: Button
 };
 
