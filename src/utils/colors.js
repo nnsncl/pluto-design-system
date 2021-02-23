@@ -5,3 +5,22 @@ export const neutral = {
     70:  '#F5F3F4',
     60:  '#FAFAFA'
 };
+
+export const primary = {
+    blue: {
+        100: '#224DA6'
+    },
+    green: {
+        100: '#008A5B'
+    },
+    yellow: {
+        100: '#FFD100',
+        10: 'FFEBC1'
+    },
+    red: {
+        100: '#FF303A'
+    },
+    pink: {
+        100: '#FF9797'
+    },
+};
