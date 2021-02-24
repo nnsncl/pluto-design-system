@@ -3,14 +3,14 @@ export const secondaryFont = "'Roboto', sans-serif";
 
 /* Scale: Minor Third 1.200 */
 export const typeScale = {
-    100: '5.16rem',
-    90: '4.3rem',
-    80: '3.583rem',
-    70: '2.986rem',
-    60: '2.488rem',
-    50: '2.074rem',
-    40: '1.728rem',
-    30: '1.44rem',
-    20: '1.2rem',
-    10: '1rem'
+    100: '51.6px',
+    90: '43px',
+    80: '35.83px',
+    70: '29.86px',
+    60: '24.88px',
+    50: '20.74px',
+    40: '17.28px',
+    30: '14.4px',
+    20: '12px',
+    10: '10px'
 }
