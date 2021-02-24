@@ -3,7 +3,8 @@ export const neutral = {
     90:  '#9B9B9B',
     80:  '#D8D8D8',
     70:  '#F5F3F4',
-    60:  '#FAFAFA'
+    60:  '#FAFAFA',
+    50:  '#FFF',
 };
 
 export const primary = {
