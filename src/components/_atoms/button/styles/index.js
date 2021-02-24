@@ -22,10 +22,9 @@ const BUTTON_MODIFIERS = {
 
 export const Body = styled.button`
     font-family: ${secondaryFont};
-    font-size: ${typeScale[10]};
-    font-weight: 400;
+    font-size: ${typeScale[30]};
+    font-weight: 500;
     line-height: 0;
-    letter-spacing: -0.01em;
     text-decoration: none;
     border: none;
     color: ${neutral[100]};
@@ -41,8 +40,8 @@ export const Body = styled.button`
         opacity: 0.3;
     }
     :hover {
-        color: ${neutral[60]};
-        background: ${neutral[100]};
+        color: ${neutral[100]};
+        background: ${neutral[50]};
     }
 
     ${applyStyleModifiers(BUTTON_MODIFIERS)}
