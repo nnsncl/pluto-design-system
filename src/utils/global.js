@@ -16,14 +16,13 @@ export const GlobalStyle = createGlobalStyle`
 
     html {
         background: ${neutral[100]};
-        font-size: 62.5%;
         box-sizing: border-box;
     }
 
     body {
         margin: 0;
         font-family: ${secondaryFont};
-        color: ${neutral[60]};
+        color: ${neutral[50]};
     }
 
     h1, h2, h3, h4, h5, h6 {
