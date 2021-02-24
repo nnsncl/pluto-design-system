@@ -2149,7 +2149,7 @@
     "prop-types" "^15.7.2"
     "regenerator-runtime" "^0.13.7"
 
-"@storybook/addons@6.1.18":
+"@storybook/addons@^6.1.18", "@storybook/addons@6.1.18":
   "integrity" "sha512-sI/ifk3RLswItRUejt4tCi3IMS9oBUd2NK4Kns1PF+x4NIry/yuOeE/de3Dz5tPjJhg9jJuBDLhxEaqRFq3Uzg=="
   "resolved" "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.1.18.tgz"
   "version" "6.1.18"
@@ -2484,7 +2484,7 @@
     "regenerator-runtime" "^0.13.7"
     "source-map" "^0.7.3"
 
-"@storybook/theming@6.1.18":
+"@storybook/theming@^6.1.18", "@storybook/theming@6.1.18":
   "integrity" "sha512-q97mKSLLnB2LmjzKiNpip7jvvrVPDi+bnYoUCWCt04zuXiaIVU8Bu4i0Y/w3Y3bHqfRbae3gZErFr89Z+f77vA=="
   "resolved" "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.1.18.tgz"
   "version" "6.1.18"
