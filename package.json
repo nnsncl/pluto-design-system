@@ -1,7 +1,19 @@
 {
-  "name": "pluto-design-system",
+  "name": "@nnsncl/pluto-design-system",
   "version": "0.1.0",
   "private": false,
+  "description": "React Design System built with React and Storybook",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnsncl/pluto-design-system.git"
+  },
+  "author": "nnsncl <nicolas.mgta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nnsncl/pluto-design-system/issues"
+  },
+  "homepage": "https://github.com/nnsncl/pluto-design-system#readme",
   "dependencies": {
     "@babel/cli": "^7.13.10",
     "@storybook/addon-a11y": "^6.1.18",
@@ -65,17 +77,5 @@
     "@storybook/preset-create-react-app": "^3.1.6",
     "@storybook/react": "^6.1.18",
     "jest": "^26.6.0"
-  },
-  "description": "React Design System built with React and Storybook",
-  "main": "dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nnsncl/pluto-design-system.git"
-  },
-  "author": "nnsncl <nicolas.mgta@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nnsncl/pluto-design-system/issues"
-  },
-  "homepage": "https://github.com/nnsncl/pluto-design-system#readme"
+  }
 }
