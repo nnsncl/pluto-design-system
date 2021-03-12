@@ -1,4 +1,5 @@
-# v0.1.1 (Fri Mar 12 2021)
+# v0.1.0 (Fri Mar 12 2021)
+- Created first version of the design system
 
 #### ⚠️ Pushed to `main`
 
@@ -38,8 +39,3 @@
 - update components architecture ([@nnsncl](https://github.com/nnsncl))
 - Design System scaffoldings ([@ene11o41](https://github.com/ene11o41))
 - Initial commit ([@nnsncl](https://github.com/nnsncl))
-
-#### Authors: 2
-
-- [@ene11o41](https://github.com/ene11o41)
-- Nicolas Nunes ([@nnsncl](https://github.com/nnsncl))
