@@ -34,6 +34,16 @@
       "react-app/jest"
     ]
   },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -54,5 +64,17 @@
     "@storybook/preset-create-react-app": "^3.1.6",
     "@storybook/react": "^6.1.18",
     "jest": "^26.6.0"
-  }
+  },
+  "description": "React Design System built with React and Storybook",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnsncl/pluto-design-system.git"
+  },
+  "author": "Nicolas Nunes <nuniroland@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nnsncl/pluto-design-system/issues"
+  },
+  "homepage": "https://github.com/nnsncl/pluto-design-system#readme"
 }
