@@ -1,7 +1,8 @@
 # pluto-design-system
 React Design System built with React and Storybook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Update project
+Open PRs with one of the labels: major, minor, patch, skip-release, prerelease, internal, documentation; before merging them
 
 ## Available Scripts
 
