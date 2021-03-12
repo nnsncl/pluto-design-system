@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Body } from './styles/index';
+import { Body } from './styles/Button';
 
 /**
- * Primary UI component for user interaction
+ * Buttons are used to initialize an action. Button labels express what action will
+ * occur when the user interacts with it.
  */
 export default function Button({ modifier, label, ariaLabel, ...restProps }) {
   return (
@@ -39,5 +40,5 @@ Button.propTypes = {
 
 Button.defaultProps = {
   modifier: 'medium',
-  onClick: undefined,
+  onClick: null,
 };
