@@ -13,4 +13,4 @@ export const typeScale = {
     30: '14.4px',
     20: '12px',
     10: '10px'
-}
+};
