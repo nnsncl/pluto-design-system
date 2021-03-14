@@ -1,34 +1,32 @@
 import styled from 'styled-components';
-import { secondaryFont, typeScale, neutral } from '../../../../utils';
-import { applyStyleModifiers } from 'styled-components-modifiers'
+import { typeScale, neutral } from '../../../../utils';
+import { applyStyleModifiers } from 'styled-components-modifiers';
+import { lighten } from 'polished';
 
 const BUTTON_MODIFIERS = {
 
     small: () => `
-        padding: 1.3rem 1.9rem;
-        border-radius: .4rem;
+        padding: 2.3rem;
     `,
 
     medium: () => `
-        padding: 1.9rem 2.3rem;
-        border-radius: .9rem;
+        padding: 2.9rem 3.6rem;
     `,
 
     large: () => `
-        padding: 1.9rem 3.6rem;
-        border-radius: .9rem;
+        padding: 2.9rem 5.2rem;
     `,
 }
 
 export const Body = styled.button`
-    font-family: ${secondaryFont};
     font-size: ${typeScale[30]};
-    font-weight: 500;
+    font-weight: bold;
     line-height: 0;
     text-decoration: none;
     border: none;
-    color: ${neutral[100]};
-    background: ${neutral[70]};
+    border-radius: 1.3rem;
+    color: ${neutral[70]};
+    background: ${neutral[100]};
     transition: all ease-out .2s;
     outline: none;
     cursor: pointer;
@@ -40,8 +38,8 @@ export const Body = styled.button`
         opacity: 0.3;
     }
     :hover {
-        color: ${neutral[100]};
-        background: ${neutral[50]};
+        color: ${neutral[50]};
+        background: ${lighten('0.13', `${neutral[100]}`)};
     }
 
     ${applyStyleModifiers(BUTTON_MODIFIERS)}

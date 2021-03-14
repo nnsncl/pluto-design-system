@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'polished';
 
 import { neutral } from './colors';
+import { primaryFont, secondaryFont } from './typography';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -14,15 +15,19 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        background: ${neutral[100]};
+        background: ${neutral[70]};
+        color: ${neutral[100]};
         box-sizing: border-box;
+        font-size: 62.5%;
     }
 
     body {
+        font-family: ${secondaryFont};
         margin: 0;
     }
 
     h1, h2, h3, h4, h5, h6 {
+        font-family: ${primaryFont};
         margin: 0;
         padding: 0;
     }
