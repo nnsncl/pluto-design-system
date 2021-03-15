@@ -19,7 +19,6 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "auto": "^10.20.1",
     "cross-env": "^7.0.3",
     "polished": "^3.7.1",
     "prettier": "^2.0.5",
