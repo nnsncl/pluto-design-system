@@ -1,6 +1,6 @@
 {
   "name": "pluto-design-system",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "private": false,
   "description": "React Design System built with React and Storybook",
   "main": "dist/index.js",
