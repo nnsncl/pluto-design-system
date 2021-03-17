@@ -7,12 +7,23 @@ import { Container, Label, Field } from './styles/Input';
 /**
  * Inputs enable the user to interact with and input content and data. This component can be used for long and short form entries.
  */
-export default function InputField({ name, label, placeholder, value, defaultValue, helper, disabled }) {
+export default function InputField({
+    name,
+    type,
+    label,
+    placeholder,
+    value,
+    defaultValue,
+    helper,
+    disabled,
+    error }) {
     return (
-        <Container disabled={disabled} >
+        <Container error={error} disabled={disabled} >
             <Label htmlFor={name} >{label}</Label>
             <Field
+                error={error}
                 name={name}
+                type={type}
                 placeholder={placeholder}
                 defaultValue={defaultValue}
                 value={value}
@@ -61,6 +72,16 @@ InputField.propTypes = {
     * Specify whether the input should be disabled.
     */
     disabled: PropTypes.bool,
+
+    /**
+    * Specify the input type.
+    */
+    type: PropTypes.oneOf(['text', 'email', 'url']).isRequired,
+
+    /**
+    * Initialize the input error state.
+    */
+    error: PropTypes.bool,
 
     /**
      * Optionally provide an onClick handler that is called whenever the input is clicked.
