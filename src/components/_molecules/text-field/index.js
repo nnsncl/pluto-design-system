@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Typography from '../../_atoms/typography/index';
-import { Container, Label, Field } from './styles/Input';
+import { Container, Label, Field } from './styles/TextField';
 
 /**
  * Inputs enable the user to interact with and input content and data. This component can be used for long and short form entries.
  */
-export default function InputField({
+export default function TextField({
     name,
     type,
     label,
@@ -36,7 +36,7 @@ export default function InputField({
     );
 };
 
-InputField.propTypes = {
+TextField.propTypes = {
 
     /**
      * Specify the label of the input.
