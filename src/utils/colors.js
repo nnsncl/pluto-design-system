@@ -9,7 +9,7 @@ export const neutral = {
 
 export const primary = {
     blue: {
-        100: '#224DA6'
+        100: '#0f6fff'
     },
     green: {
         100: '#008A5B'
