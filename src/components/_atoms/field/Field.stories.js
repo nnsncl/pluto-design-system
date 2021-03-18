@@ -4,7 +4,7 @@ import Field from './index';
 
 // eslint-disable-next-line
 export default {
-  title: 'Atoms/Field',
+  title: 'Atoms/Inputs/Field',
   component: Field
 };
 

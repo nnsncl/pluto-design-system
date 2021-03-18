@@ -4,7 +4,7 @@ import NativeField from './index';
 
 // eslint-disable-next-line
 export default {
-  title: 'Atoms/NativeField',
+  title: 'Atoms/Inputs/NativeField',
   component: NativeField
 };
 
