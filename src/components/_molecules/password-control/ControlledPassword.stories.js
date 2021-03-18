@@ -33,16 +33,6 @@ Disabled.args = {
     error: false,
 };
 
-export const WithHelper = Template.bind({});
-WithHelper.args = {
-    name: 'password-input',
-    label: 'Password Input',
-    placeholder: '',
-    defaultValue: '',
-    helper: '8 Characters, 1 Uppercase, 1 Lowercase, 1 Number.',
-    disabled: false,
-    error: false,
-};
 
 export const onError = Template.bind({});
 onError.args = {
