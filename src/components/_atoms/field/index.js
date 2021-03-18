@@ -1,36 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Typography from '../../_atoms/typography/index';
-import { Container, Label, Field } from './styles/Input';
+import { Container, HiddenField } from './styles/Field';
 
 /**
  * Inputs enable the user to interact with and input content and data. This component can be used for long and short form entries.
+ * Use this component if you need to add an Icon or a button to it.
  */
-export default function InputField({ name, label, placeholder, value, defaultValue, helper, disabled }) {
+export default function Field({
+    name,
+    type,
+    placeholder,
+    value,
+    defaultValue,
+    disabled,
+    error,
+    onClick,
+    children,
+}) {
     return (
-        <Container disabled={disabled} >
-            <Label htmlFor={name} >{label}</Label>
-            <Field
+        <Container error={error} disabled={disabled}>
+            <HiddenField
                 name={name}
+                type={type}
                 placeholder={placeholder}
                 defaultValue={defaultValue}
                 value={value}
-                disabled={disabled} />
-            { helper
-                ? <Typography>{helper}</Typography>
-                : null
-            }
+                disabled={disabled}
+                onClick={onClick}
+            />
+            {children}
         </Container>
     );
 };
 
-InputField.propTypes = {
+
+
+Field.propTypes = {
 
     /**
-     * Specify the label of the input.
+     * Child will be used for its parent related actions.
      */
-    label: PropTypes.string.isRequired,
+    children: PropTypes.node,
 
     /**
      * Specify the name of the input.
@@ -53,14 +64,19 @@ InputField.propTypes = {
     defaultValue: PropTypes.string,
 
     /**
-    * Provide text that is used alongside the control label for additional help.
-    */
-    helper: PropTypes.string,
-
-    /**
     * Specify whether the input should be disabled.
     */
     disabled: PropTypes.bool,
+
+    /**
+    * Specify the input type.
+    */
+    type: PropTypes.oneOf(['text', 'password']).isRequired,
+
+    /**
+    * Initialize the input error state.
+    */
+    error: PropTypes.bool,
 
     /**
      * Optionally provide an onClick handler that is called whenever the input is clicked.
