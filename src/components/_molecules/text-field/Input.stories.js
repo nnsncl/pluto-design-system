@@ -11,8 +11,8 @@ export default {
 
 const Template = (args) => <TextField {...args} />;
 
-export const Simple = Template.bind({});
-Simple.args = {
+export const Default = Template.bind({});
+Default.args = {
   name: 'default-input',
   type: 'text',
   label: 'Label',

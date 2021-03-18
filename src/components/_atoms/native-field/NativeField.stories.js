@@ -11,8 +11,8 @@ export default {
 
 const Template = (args) => <NativeField {...args} />;
 
-export const Simple = Template.bind({});
-Simple.args = {
+export const Default = Template.bind({});
+Default.args = {
   name: 'default-input',
   type: 'text',
   placeholder: 'Placeholder',
@@ -28,16 +28,6 @@ Disabled.args = {
   placeholder: 'Placeholder',
   defaultValue: '',
   disabled: true,
-  error: false,
-};
-
-export const WithHelper = Template.bind({});
-WithHelper.args = {
-  name: 'default-input',
-  type: 'text',
-  placeholder: 'Placeholder',
-  defaultValue: '',
-  disabled: false,
   error: false,
 };
 

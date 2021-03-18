@@ -27,6 +27,7 @@ Small.args = {
 
 export const Label = TypographyLabelTemplate.bind({});
 Label.args = {
+  htmlFor: 'label-sample',
   modifier: 'bold',
   children: 'The quick brown fox jumps over the lazy dog.'
 };
