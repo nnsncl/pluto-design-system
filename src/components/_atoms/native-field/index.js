@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 
 import { Field } from './styles/NativeField';
 
+/**
+ * Inputs enable the user to interact with and input content and data. This component can be used for long and short form entries.
+ * Use this component if you need an input without an Icon, a Button or any kind of combination.
+ */
 export default function NativeField({
     name,
     type,
