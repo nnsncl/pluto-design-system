@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Typography from '../../_atoms/typography/index';
-import { Container, Field } from './styles/TextField';
+import NativeField from '../../_atoms/native-field/index';
+
+import { Container } from './styles/TextField';
 
 /**
  * Inputs enable the user to interact with and input content and data. This component can be used for long and short form entries.
@@ -20,14 +22,15 @@ export default function TextField({
     return (
         <Container error={error} disabled={disabled} >
             <Typography.Label htmlFor={name} >{label}</Typography.Label>
-            <Field
+            <NativeField
                 error={error}
                 name={name}
                 type={type}
                 placeholder={placeholder}
                 defaultValue={defaultValue}
                 value={value}
-                disabled={disabled} />
+                disabled={disabled}
+            />
             { helper
                 ? <Typography>{helper}</Typography>
                 : null
