@@ -9,6 +9,7 @@ export default {
 };
 
 const TypographySmallTemplate = (args) => <Typography.Small {...args} />;
+const TypographyLabelTemplate = (args) => <Typography.Label {...args} />;
 const TypographyTemplate = (args) => <Typography {...args} />;
 const TypographyLargeTemplate = (args) => <Typography.Large {...args} />;
 const Title100Template = (args) => <Typography.Title100 {...args} />;
@@ -21,6 +22,13 @@ const Title600Template = (args) => <Typography.Title600 {...args} />;
 export const Small = TypographySmallTemplate.bind({});
 Small.args = {
   modifier: 'regular',
+  children: 'The quick brown fox jumps over the lazy dog.'
+};
+
+export const Label = TypographyLabelTemplate.bind({});
+Label.args = {
+  htmlFor: 'label-sample',
+  modifier: 'bold',
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 

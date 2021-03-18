@@ -13,8 +13,14 @@ const TYPOGRAPHY_MODIFIERS = {
 };
 
 
+
 export const Small = styled.p`
     font-size: ${typeScale[20]};
+    ${applyStyleModifiers(TYPOGRAPHY_MODIFIERS)};
+`;
+
+export const Label = styled.label`
+    font-size: ${typeScale[30]};
     ${applyStyleModifiers(TYPOGRAPHY_MODIFIERS)};
 `;
 
