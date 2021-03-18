@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import {
     Small,
+    Label,
     Body,
     Large,
     Title100,
@@ -19,6 +20,10 @@ import {
 
 export default function Typography({ children, modifier }){
     return <Body modifiers={[modifier]} >{children}</Body>
+}
+
+Typography.Label = function TypographyLabel({htmlFor, children, modifier}){
+    return <Label htmlFor={htmlFor} modifiers={[modifier]} >{children}</Label>
 }
 
 Typography.Small = function TypographySmall({children, modifier}){
@@ -56,7 +61,7 @@ Typography.Title600 = function TypographyTittle600({children, modifier}){
 Typography.propTypes = {
     
     /**
-     * Font Weight and color controls
+     * Font Weight and color controls.
      */
     modifier: PropTypes.oneOf([
         'thin',
@@ -69,12 +74,24 @@ Typography.propTypes = {
     ]).isRequired,
 
     /**
-     * Component's content
+     * Component's content.
      */
     children: PropTypes.node.isRequired
 
 }
+
+Typography.Label.propTypes = {
+
+    /**
+     * Define <for> attribute. 
+     */
+    htmlFor: PropTypes.string.isRequired
+}
   
 Typography.defaultProps = {
     modifier: 'regular'
+  };
+
+Typography.Label.argumentsdefaultProps = {
+    modifier: 'bold'
   };

@@ -14,14 +14,13 @@ export const Container = styled.div`
         ${(props) => props.error === true && (`color: ${primary.red[100]};`)}
     }
 
+    label {
+        margin-bottom: 1.3rem;
+    }
+
     ${(props) => props.disabled === true && (`opacity: 0.3;`)}
 `;
 
-export const Label = styled.label`
-    font-size: ${typeScale[30]};
-    font-weight: bold;
-    margin-bottom: 1.3rem;
-`;
 
 export const Field = styled.input`
     font-size: ${typeScale[30]};

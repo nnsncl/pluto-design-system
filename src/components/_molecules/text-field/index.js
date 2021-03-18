@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Typography from '../../_atoms/typography/index';
-import { Container, Label, Field } from './styles/TextField';
+import { Container, Field } from './styles/TextField';
 
 /**
  * Inputs enable the user to interact with and input content and data. This component can be used for long and short form entries.
@@ -19,7 +19,7 @@ export default function TextField({
     error }) {
     return (
         <Container error={error} disabled={disabled} >
-            <Label htmlFor={name} >{label}</Label>
+            <Typography.Label htmlFor={name} >{label}</Typography.Label>
             <Field
                 error={error}
                 name={name}
