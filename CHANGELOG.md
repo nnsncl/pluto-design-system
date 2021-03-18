@@ -2,6 +2,7 @@
 - Add Inputs atoms and Fields molecules
 - Fields include a password variant. It comes with a show/hide control on the value
 - Edit neutral[80] and primary.blue[100] values
+- Remove Auto documentation from Readme
 
 # v0.1.3 (Sun Mar 15 2021)
 - Restore manual release
