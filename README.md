@@ -4,7 +4,9 @@ React Design System built with React and Storybook
 
 ## Chromatic UI
 
-Use Chromatic to see documentations, live components and give feedbacks. https://www.chromatic.com/builds?appId=605482fcef124f00217a967b
+Use Chromatic to see documentations and see live components.
+https://www.chromatic.com/builds?appId=605482fcef124f00217a967b
+https://www.chromatic.com/docs/
 
 ## Available Scripts
 
