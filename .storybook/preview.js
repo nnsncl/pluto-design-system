@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { GlobalStyle } from '../src/utils/global';
 import { themes } from '@storybook/theming';
@@ -14,6 +15,6 @@ export const decorators = [
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   docs: {
-    theme: themes.dark,
+    theme: themes.light,
   },
-}
+};
