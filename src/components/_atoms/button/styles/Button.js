@@ -19,7 +19,7 @@ const BUTTON_MODIFIERS = {
 }
 
 export const Body = styled.button`
-    font-size: ${typeScale[30]};
+    font-size: ${typeScale[40]};
     font-weight: bold;
     line-height: 0;
     text-decoration: none;
