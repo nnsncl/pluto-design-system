@@ -1,3 +1,5 @@
+# v0.1.6 (Sat Mar 20 2021)
+- Adjust component exports
 # v0.1.5 (Fri Mar 19 2021)
 - Edit package.json
 - Add rollup.config.js
