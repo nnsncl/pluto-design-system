@@ -8,14 +8,13 @@ export default {
   component: Button
 };
 
-
 const Template = (args) => <Button {...args} />;
 
 export const Large = Template.bind({});
 Large.args = {
   modifier: 'large',
   label: 'Button',
-  ariaLabel: 'Default Button'
+  ariaLabel: 'Default Button',
 };
 
 export const Medium = Template.bind({});

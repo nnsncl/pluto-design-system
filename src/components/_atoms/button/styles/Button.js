@@ -30,13 +30,13 @@ export const Body = styled.button`
     transition: all ease-out .2s;
     outline: none;
     cursor: pointer;
+
     :disabled {
-        mix-blend-mode: difference;
-        background-color: ${neutral[80]};
+        opacity: 0.3;
         border: none;
         cursor: not-allowed;
-        opacity: 0.3;
     }
+
     :hover {
         color: ${neutral[50]};
         background: ${lighten('0.13', `${neutral[100]}`)};
