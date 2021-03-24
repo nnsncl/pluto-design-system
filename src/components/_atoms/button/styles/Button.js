@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { typeScale, neutral } from '../../../../utils';
+
 import { applyStyleModifiers } from 'styled-components-modifiers';
-import { lighten } from 'polished';
+import { motion } from "framer-motion";
 
 const BUTTON_MODIFIERS = {
 
@@ -14,32 +15,44 @@ const BUTTON_MODIFIERS = {
     `,
 
     large: () => `
-        padding: 2.9rem 5.2rem;
+        padding: 2.9rem 5.6rem;
     `,
+
+    dark: () => `
+        color: ${neutral[80]};
+        background: ${neutral[100]};
+        :hover {
+            color: ${neutral[50]};
+        }
+    `,
+
+    light: () => `
+        color: ${neutral[100]};
+        background: ${neutral[50]};
+        :hover {
+            color: ${neutral[100]};
+        }
+    `,
+
 }
 
-export const Body = styled.button`
-    font-size: ${typeScale[40]};
-    font-weight: bold;
+export const Body = styled(motion.button)`
+    font-size: ${typeScale[30]};
+    font-weight: 400;
     line-height: 0;
     text-decoration: none;
     border: none;
     border-radius: 1.3rem;
-    color: ${neutral[70]};
-    background: ${neutral[100]};
-    transition: all ease-out .2s;
+    /* color: ${neutral[80]};
+    background: ${neutral[100]}; */
     outline: none;
     cursor: pointer;
+    transition: all ease-out .2s;
+    
     :disabled {
-        mix-blend-mode: difference;
-        background-color: ${neutral[80]};
+        opacity: 0.3;
         border: none;
         cursor: not-allowed;
-        opacity: 0.3;
-    }
-    :hover {
-        color: ${neutral[50]};
-        background: ${lighten('0.13', `${neutral[100]}`)};
     }
 
     ${applyStyleModifiers(BUTTON_MODIFIERS)}
