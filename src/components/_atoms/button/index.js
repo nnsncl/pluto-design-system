@@ -13,16 +13,16 @@ import { Body } from './styles/Button';
  * - Provide an aria-label for buttons that don't contain text (e.g. icon buttons).
  */
 export default function Button({
-    modifier,
-    'aria-label': ariaLabel,
-    as,
-    disabled,
-    onClick,
-    children,
-    ...restProps }) {
+  modifiers,
+  'aria-label': ariaLabel,
+  as,
+  disabled,
+  onClick,
+  children,
+  ...restProps }) {
 
-  function handleKeyDown(e){
-    if(disabled) return;
+  function handleKeyDown(e) {
+    if (disabled) return;
     if (e.key === 'Enter' || e.key === ' ') onClick();
   }
 
@@ -30,7 +30,7 @@ export default function Button({
     <Body
       role='button'
       tabIndex={0}
-      modifiers={modifier}
+      modifiers={modifiers}
       as={as}
       onKeyDown={handleKeyDown}
       disabled={disabled}
@@ -49,9 +49,11 @@ export default function Button({
 Button.propTypes = {
 
   /**
-   * How large should the button be
+   * Specify Button variant, you can set multipe modifers to a single component.
+   * **Modifiers:**
+   * `small`, `medium`, `large`, `dark`, `light`
    */
-  modifier: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
+  modifiers: PropTypes.array.isRequired,
 
   /**
   * Specify whether the Button should render as a link
@@ -61,7 +63,7 @@ Button.propTypes = {
   /**
     * Specify whether the button should be disabled.
   */
-   disabled: PropTypes.bool,
+  disabled: PropTypes.bool,
 
   /**
    * Button content
