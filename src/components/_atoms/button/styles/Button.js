@@ -17,6 +17,23 @@ const BUTTON_MODIFIERS = {
     large: () => `
         padding: 2.9rem 5.6rem;
     `,
+
+    dark: () => `
+        color: ${neutral[80]};
+        background: ${neutral[100]};
+        :hover {
+            color: ${neutral[50]};
+        }
+    `,
+
+    light: () => `
+        color: ${neutral[100]};
+        background: ${neutral[50]};
+        :hover {
+            color: ${neutral[100]};
+        }
+    `,
+
 }
 
 export const Body = styled(motion.button)`
@@ -26,20 +43,16 @@ export const Body = styled(motion.button)`
     text-decoration: none;
     border: none;
     border-radius: 1.3rem;
-    color: ${neutral[70]};
-    background: ${neutral[100]};
-    transition: all ease-out .2s;
+    /* color: ${neutral[80]};
+    background: ${neutral[100]}; */
     outline: none;
     cursor: pointer;
-
+    transition: all ease-out .2s;
+    
     :disabled {
         opacity: 0.3;
         border: none;
         cursor: not-allowed;
-    }
-
-    :hover {
-        color: ${neutral[50]};
     }
 
     ${applyStyleModifiers(BUTTON_MODIFIERS)}
