@@ -5,19 +5,20 @@ import { Body } from './styles/Button';
 /**
  * Buttons are used to initialize an action. Button labels express what action will
  * occur when the user interacts with it.
- * 
- * Best practices:
- * Define the hierarchy of buttons with different variants.
- * Button label must be short and understandable.
- * Provide an aria-label for buttons that don't contain text (e.g. icon buttons).
+ *
+ * **Best practices:** 
+ *
+ * - Define the hierarchy of buttons with different variants.
+ * - Button label must be short and understandable.
+ * - Provide an aria-label for buttons that don't contain text (e.g. icon buttons).
  */
 export default function Button({
     modifier,
-    label,
     'aria-label': ariaLabel,
     as,
     disabled,
     onClick,
+    children,
     ...restProps }) {
 
   function handleKeyDown(e){
@@ -36,9 +37,11 @@ export default function Button({
       onClick={!disabled ? onClick : null}
       aria-label={ariaLabel}
       aria-disabled={disabled ? 'true' : 'false'}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
       {...restProps}
     >
-      <span>{label}</span>
+      {children}
     </Body>
   );
 };
@@ -61,9 +64,9 @@ Button.propTypes = {
    disabled: PropTypes.bool,
 
   /**
-   * Button contents
+   * Button content
    */
-  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 
   /**
    * Define aria-label if the button isn't a prent of a text element.
