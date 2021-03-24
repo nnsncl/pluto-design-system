@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { typeScale, neutral } from '../../../../utils';
+
 import { applyStyleModifiers } from 'styled-components-modifiers';
-import { lighten } from 'polished';
+import { motion } from "framer-motion";
 
 const BUTTON_MODIFIERS = {
 
@@ -14,13 +15,13 @@ const BUTTON_MODIFIERS = {
     `,
 
     large: () => `
-        padding: 2.9rem 5.2rem;
+        padding: 2.9rem 5.6rem;
     `,
 }
 
-export const Body = styled.button`
-    font-size: ${typeScale[40]};
-    font-weight: bold;
+export const Body = styled(motion.button)`
+    font-size: ${typeScale[30]};
+    font-weight: 400;
     line-height: 0;
     text-decoration: none;
     border: none;
@@ -39,7 +40,6 @@ export const Body = styled.button`
 
     :hover {
         color: ${neutral[50]};
-        background: ${lighten('0.13', `${neutral[100]}`)};
     }
 
     ${applyStyleModifiers(BUTTON_MODIFIERS)}
