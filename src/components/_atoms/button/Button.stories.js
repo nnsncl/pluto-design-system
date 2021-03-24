@@ -13,21 +13,21 @@ const Template = (args) => <Button {...args} />;
 export const Large = Template.bind({});
 Large.args = {
   modifier: 'large',
-  label: 'Button',
+  children: 'Button',
   ariaLabel: 'Default Button',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
   modifier: 'medium',
-  label: 'Button',
+  children: 'Button',
   ariaLabel: 'Default Button'
 };
 
 export const Small = Template.bind({});
 Small.args = {
   modifier: 'small',
-  label: 'Button',
+  children: 'Button',
   ariaLabel: 'Default Button'
 };
 
