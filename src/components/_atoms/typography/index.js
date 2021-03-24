@@ -18,60 +18,54 @@ import {
  * Typography can help create clear hierarchies, organize information, and guide users   * through a product or experience.
  */
 
-export default function Typography({ children, modifier }){
-    return <Body modifiers={[modifier]} >{children}</Body>
+export default function Typography({ children, modifiers }) {
+    return <Body modifiers={modifiers} >{children}</Body>
 }
 
-Typography.Label = function TypographyLabel({htmlFor, children, modifier}){
-    return <Label htmlFor={htmlFor} modifiers={[modifier]} >{children}</Label>
+Typography.Label = function TypographyLabel({ htmlFor, children, modifiers }) {
+    return <Label htmlFor={htmlFor} modifiers={modifiers} >{children}</Label>
 }
 
-Typography.Small = function TypographySmall({children, modifier}){
-    return <Small modifiers={[modifier]} >{children}</Small>
+Typography.Small = function TypographySmall({ children, modifiers }) {
+    return <Small modifiers={modifiers} >{children}</Small>
 }
 
-Typography.Large = function TypographyLarge({children, modifier}){
-    return <Large modifiers={[modifier]} >{children}</Large>
+Typography.Large = function TypographyLarge({ children, modifiers }) {
+    return <Large modifiers={modifiers} >{children}</Large>
 }
 
-Typography.Title100 = function TypographyTittle100({children, modifier}){
-    return <Title100 modifiers={[modifier]} >{children}</Title100>
+Typography.Title100 = function TypographyTittle100({ children, modifiers }) {
+    return <Title100 modifiers={modifiers} >{children}</Title100>
 }
 
-Typography.Title200 = function TypographyTittle200({children, modifier}){
-    return <Title200 modifiers={[modifier]} >{children}</Title200>
+Typography.Title200 = function TypographyTittle200({ children, modifiers }) {
+    return <Title200 modifiers={modifiers} >{children}</Title200>
 }
 
-Typography.Title300 = function TypographyTittle300({children, modifier}){
-    return <Title300 modifiers={[modifier]} >{children}</Title300>
+Typography.Title300 = function TypographyTittle300({ children, modifiers }) {
+    return <Title300 modifiers={modifiers} >{children}</Title300>
 }
 
-Typography.Title400 = function TypographyTittle400({children, modifier}){
-    return <Title400 modifiers={[modifier]} >{children}</Title400>
+Typography.Title400 = function TypographyTittle400({ children, modifiers }) {
+    return <Title400 modifiers={modifiers} >{children}</Title400>
 }
 
-Typography.Title500 = function TypographyTittle500({children, modifier}){
-    return <Title500 modifiers={[modifier]} >{children}</Title500>
+Typography.Title500 = function TypographyTittle500({ children, modifiers }) {
+    return <Title500 modifiers={modifiers} >{children}</Title500>
 }
 
-Typography.Title600 = function TypographyTittle600({children, modifier}){
-    return <Title600 modifiers={[modifier]} >{children}</Title600>
+Typography.Title600 = function TypographyTittle600({ children, modifiers }) {
+    return <Title600 modifiers={modifiers} >{children}</Title600>
 }
 
 Typography.propTypes = {
-    
+
     /**
-     * Font Weight and color controls.
-     */
-    modifier: PropTypes.oneOf([
-        'thin',
-        'regular',
-        'semiBold',
-        'bold',
-        'extraBold',
-        'light',
-        'dark'
-    ]).isRequired,
+    * Specify Font Weight and color controls. You can set multipe modifers to a single component.
+    * **Modifiers:**
+    * `thin`, `regular`, `semiBold`, `bold`, `extraBold`, `light`, `black`
+    */
+    modifiers: PropTypes.array.isRequired,
 
     /**
      * Component's content.
@@ -81,17 +75,13 @@ Typography.propTypes = {
 }
 
 Typography.Label.propTypes = {
-
-    /**
-     * Define <for> attribute. 
-     */
     htmlFor: PropTypes.string.isRequired
 }
-  
+
 Typography.defaultProps = {
-    modifier: 'regular'
-  };
+    modifiers: 'regular'
+};
 
 Typography.Label.argumentsdefaultProps = {
-    modifier: 'bold'
-  };
+    modifiers: 'bold'
+};
