@@ -21,61 +21,61 @@ const Title600Template = (args) => <Typography.Title600 {...args} />;
 
 export const Small = TypographySmallTemplate.bind({});
 Small.args = {
-  modifier: ['regular'],
+  modifiers: ['regular'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 
 export const Label = TypographyLabelTemplate.bind({});
 Label.args = {
   htmlFor: 'label-sample',
-  modifier: ['bold'],
+  modifiers: ['bold'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 
 export const Body = TypographyTemplate.bind({});
 Body.args = {
-  modifier: ['regular'],
+  modifiers: ['regular'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 
 export const Large = TypographyLargeTemplate.bind({});
 Large.args = {
-  modifier: ['regular'],
+  modifiers: ['regular'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 
 export const Title100 = Title100Template.bind({});
 Title100.args = {
-  modifier: ['bold'],
+  modifiers: ['bold'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 
 export const Title200 = Title200Template.bind({});
 Title200.args = {
-  modifier: ['bold'],
+  modifiers: ['bold'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 
 export const Title300 = Title300Template.bind({});
 Title300.args = {
-  modifier: ['bold'],
+  modifiers: ['bold'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 
 export const Title400 = Title400Template.bind({});
 Title400.args = {
-  modifier: ['bold'],
+  modifiers: ['bold'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 
 export const Title500 = Title500Template.bind({});
 Title500.args = {
-  modifier: ['bold'],
+  modifiers: ['bold'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
 
 export const Title600 = Title600Template.bind({});
 Title600.args = {
-  modifier: ['bold'],
+  modifiers: ['bold'],
   children: 'The quick brown fox jumps over the lazy dog.'
 };
