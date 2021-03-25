@@ -30,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: ${primaryFont};
         margin: 0;
         padding: 0;
+        line-height: 1em;
     }
 
     main {
