@@ -51,7 +51,7 @@ Button.propTypes = {
   /**
    * Specify Button variant, you can set multipe modifers to a single component.
    * **Modifiers:**
-   * `small`, `medium`, `large`, `dark`, `light`
+   * `small`, `medium`, `large`, `dark`, `light`, `secondary`
    */
   modifiers: PropTypes.array.isRequired,
 
@@ -83,6 +83,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  modifier: 'medium',
+  modifiers: ['medium', 'secondary'],
   onClick: null,
 };

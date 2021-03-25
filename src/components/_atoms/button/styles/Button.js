@@ -34,6 +34,11 @@ const BUTTON_MODIFIERS = {
         }
     `,
 
+    secondary: () => `
+        color: ${neutral[100]};
+        background: ${neutral[70]};
+    `,
+
 }
 
 export const Body = styled(motion.button)`
