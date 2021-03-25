@@ -1,20 +1,26 @@
 import React from 'react';
 
-import ControlledPasswordField from './index';
+import PasswordField from './index';
 
 // eslint-disable-next-line
 export default {
-    title: 'Molecules/Controlled Inputs/ControlledPasswordField',
-    component: ControlledPasswordField
+    title: 'Molecules/PasswordField',
+    component: PasswordField
 };
 
-
-const Template = (args) => <ControlledPasswordField {...args} />;
+const Template = (args) => {
+    return (
+        <form>
+            <PasswordField {...args} />
+        </form>
+    );
+};
 
 export const Default = Template.bind({});
 Default.args = {
     name: 'password-input',
     label: 'Password Input',
+    type: 'password',
     placeholder: '',
     defaultValue: '',
     helper: '8 Characters, 1 Uppercase, 1 Lowercase, 1 Number.',

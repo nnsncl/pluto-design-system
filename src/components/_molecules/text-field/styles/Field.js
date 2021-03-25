@@ -1,44 +1,53 @@
 import styled from 'styled-components';
 import { typeScale, neutral, primary } from '../../../../utils';
 
-import { lighten } from 'polished';
+export const Container = styled.fieldset`
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
 
-export const Container = styled.div`
+    p {
+        margin: 0;
+
+        :last-of-type{
+            align-self: flex-end;
+        }
+    }
+
+    ${(props) => props.disabled === true
+        && (`opacity: 0.3;`)
+    }
+`;
+
+export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.9rem;
+    padding: 0.3rem 1.9rem;
     border-radius: 1.6rem;
-    margin-bottom: 0.9rem;
+    margin: 0.9rem 0;
     background: ${neutral[50]};
     transition: all ease-out .2s;
     width: 100%;
 
     ${(props) => props.error === true
         ? (`border: 2px solid ${primary.red[100]};`)
-        : (`border: 2px solid ${neutral[80]};`)
-    }
-
-    ${(props) => props.disabled === true
-        && (`opacity: 0.3;`)
+        : (`border: 2px solid transparent};`)
     }
 
     :hover {
         ${(props) => props.error === true 
-            ? (` border: 2px solid ${primary.red[100]};
-                 box-shadow: 0px 0px 1px 3px ${lighten('0.3', primary.red[100])};`)
-            : (` border: 2px solid ${neutral[90]};
-                 box-shadow: 0px 0px 1px 3px ${lighten('0.8', neutral[100])};`)
-        }
-    }
-
-    :focus {
-        ${(props) => props.error === true
             ? (`border: 2px solid ${primary.red[100]};`)
-            : (`border: 2px solid ${neutral[90]};`)
+            : (`border: 2px solid ${neutral[80]};`)
         }
     }
-
+    
+    :disabled {
+        opacity: 0.3;
+    }
 `;
 
 export const HiddenField = styled.input`

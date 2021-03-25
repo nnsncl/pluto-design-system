@@ -2,15 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Typography from '../../_atoms/typography/index';
-import Field from '../../_atoms/field/index';
 
-import { Container } from '../native-field-control/styles/NativeControlledField'
+import { Container, HiddenField, Wrapper } from './styles/Field';
 
 /**
- * Controlled Inputs enable the user to customize the associated labels and helpers throught properties.
+ * Fields enable the user to customize the associated labels and helpers throught properties.
  * Use this component if you need to add an Icon or a button to it.
  */
-export default function ControlledField({
+export default function TextField({
     name,
     type,
     label,
@@ -20,31 +19,35 @@ export default function ControlledField({
     helper,
     disabled,
     error,
+    onClick,
     children }) {
 
     return (
-        <Container error={error} disabled={disabled} >
-            <Typography.Label modifier='bold' htmlFor={name} >{label}</Typography.Label>
-            <Field
-                error={error}
-                name={name}
-                type={type}
-                placeholder={placeholder}
-                defaultValue={defaultValue}
-                value={value}
-                disabled={disabled}
-            >
+        <Container disabled={disabled} >
+            <Typography.Label modifiers={['bold']} htmlFor={name} >{label}</Typography.Label>
+            <Wrapper error={error} >
+                <HiddenField
+                    error={error}
+                    name={name}
+                    type={type}
+                    placeholder={placeholder}
+                    defaultValue={defaultValue}
+                    value={value}
+                    disabled={disabled}
+                    onClick={onClick}
+                    autocomplete='on'
+                />
                 {children}
-            </Field>
+            </Wrapper>
             { helper
-                ? <Typography>{helper}</Typography>
+                ? <Typography modifiers={['regular']} >{helper}</Typography>
                 : null
             }
         </Container>
     );
 };
 
-ControlledField.propTypes = {
+TextField.propTypes = {
 
     /**
      * Specify the element displayed as a children
@@ -89,7 +92,7 @@ ControlledField.propTypes = {
     /**
     * Specify the input type.
     */
-    type: PropTypes.oneOf(['text', 'email', 'url']).isRequired,
+    type: PropTypes.oneOf(['text', 'email', 'url', 'password']).isRequired,
 
     /**
     * Initialize the input error state.
