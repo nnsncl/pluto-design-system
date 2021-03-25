@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Typography from '../../_atoms/typography/index';
 
-import { Container, HiddenField, Wrapper } from './styles/Field';
+import { Container, HiddenField, Wrapper, Indicator } from './styles/Field';
 
 /**
  * Fields enable the user to customize the associated labels and helpers throught properties.
@@ -18,14 +18,18 @@ export default function TextField({
     defaultValue,
     helper,
     disabled,
+    required,
     error,
     onClick,
+    modifiers,
     children }) {
 
     return (
         <Container disabled={disabled} >
-            <Typography.Label modifiers={['bold']} htmlFor={name} >{label}</Typography.Label>
-            <Wrapper error={error} >
+            <Typography.Label modifiers={['bold']} htmlFor={name}>
+                {label}{required ? <Indicator>*</Indicator> : null}
+            </Typography.Label>
+            <Wrapper error={error} modifiers={modifiers} >
                 <HiddenField
                     error={error}
                     name={name}
@@ -34,6 +38,7 @@ export default function TextField({
                     defaultValue={defaultValue}
                     value={value}
                     disabled={disabled}
+                    required={required}
                     onClick={onClick}
                     autocomplete='on'
                 />
@@ -49,6 +54,13 @@ export default function TextField({
 
 TextField.propTypes = {
 
+    /**
+    * Specify Input variant, you can set multipe modifers to a single component.
+    * **Modifiers:**
+    * `light`, `dark`
+    */
+    modifiers: PropTypes.array.isRequired,
+    
     /**
      * Specify the element displayed as a children
      */
@@ -88,6 +100,11 @@ TextField.propTypes = {
     * Specify whether the input should be disabled.
     */
     disabled: PropTypes.bool,
+
+    /**
+    * Specify whether the input should be required.
+    */
+    required: PropTypes.bool,
 
     /**
     * Specify the input type.

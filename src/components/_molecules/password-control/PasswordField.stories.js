@@ -18,6 +18,7 @@ const Template = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
+    modifiers: ['light'],
     name: 'password-input',
     label: 'Password Input',
     type: 'password',
@@ -30,6 +31,7 @@ Default.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
+    modifiers: ['light'],
     name: 'password-input',
     label: 'Password Input',
     placeholder: '',
@@ -42,6 +44,7 @@ Disabled.args = {
 
 export const onError = Template.bind({});
 onError.args = {
+    modifiers: ['light'],
     name: 'password-input',
     label: 'Password Input',
     placeholder: '',

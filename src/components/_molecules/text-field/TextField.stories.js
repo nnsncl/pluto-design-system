@@ -1,7 +1,6 @@
 import React from 'react';
 
 import TextField from './index';
-import PasswordField from './index';
 
 // eslint-disable-next-line
 export default {
@@ -11,9 +10,9 @@ export default {
 
 const Template = (args) => <TextField {...args} />;
 
-
 export const Default = Template.bind({});
 Default.args = {
+    modifiers: ['light'],
     name: 'default-input',
     type: 'text',
     label: 'Label',
@@ -26,6 +25,7 @@ Default.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
+    modifiers: ['light'],
     name: 'default-input',
     type: 'text',
     label: 'Label',
@@ -38,6 +38,7 @@ Disabled.args = {
 
 export const WithHelper = Template.bind({});
 WithHelper.args = {
+    modifiers: ['light'],
     name: 'default-input',
     type: 'text',
     label: 'Label',
@@ -50,6 +51,7 @@ WithHelper.args = {
 
 export const onError = Template.bind({});
 onError.args = {
+    modifiers: ['light'],
     name: 'default-input',
     type: 'text',
     label: 'Label',

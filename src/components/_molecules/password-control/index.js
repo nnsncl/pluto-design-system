@@ -16,7 +16,9 @@ export default function PasswordField({
     defaultValue,
     helper,
     disabled,
+    required,
     onClick,
+    modifiers,
     error }) {
 
     const [isVisible, setIsVisible] = useState(false);
@@ -29,6 +31,7 @@ export default function PasswordField({
     return (
         <TextField
             disabled={disabled}
+            required={required}
             defaultValue={defaultValue}
             helper={helper}
             label={label}
@@ -38,6 +41,7 @@ export default function PasswordField({
             error={error}
             value={value}
             type={isVisible ? 'text' : 'password'}
+            modifiers={modifiers}
         >
             <ActionWrapper onClick={handleToggleVisibility} >
                 <Icon viewBox='0 0 48 48' >
@@ -56,6 +60,13 @@ export default function PasswordField({
 };
 
 PasswordField.propTypes = {
+
+    /**
+    * Specify Input variant, you can set multipe modifers to a single component.
+    * **Modifiers:**
+    * `light`, `dark`
+    */
+    modifiers: PropTypes.array.isRequired,
 
     /**
      * Specify the label of the input.
@@ -91,6 +102,11 @@ PasswordField.propTypes = {
     * Specify whether the input should be disabled.
     */
     disabled: PropTypes.bool,
+
+    /**
+    * Specify whether the input should be required.
+    */
+    required: PropTypes.bool,
 
     /**
     * Initialize the input error state.

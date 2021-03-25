@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 import { typeScale, neutral, primary } from '../../../../utils';
 
+import { applyStyleModifiers } from 'styled-components-modifiers';
+
+const INPUT_MODIFIERS = {
+    light: () => `
+        background: ${neutral[50]};
+    `,
+    dark: () => `
+        background: ${neutral[70]};
+    `
+}
+
 export const Container = styled.fieldset`
     display: flex;
     flex-direction: column;
@@ -29,7 +40,6 @@ export const Wrapper = styled.div`
     padding: 0.3rem 1.9rem;
     border-radius: 1.6rem;
     margin: 0.9rem 0;
-    background: ${neutral[50]};
     transition: all ease-out .2s;
     width: 100%;
 
@@ -48,6 +58,8 @@ export const Wrapper = styled.div`
     :disabled {
         opacity: 0.3;
     }
+
+    ${applyStyleModifiers(INPUT_MODIFIERS)}
 `;
 
 export const HiddenField = styled.input`
@@ -62,4 +74,9 @@ export const HiddenField = styled.input`
     :disabled{
         cursor: not-allowed;
     }
+`;
+
+export const Indicator = styled.span`
+    color: ${primary.red[100]};
+    margin-left: 0.3rem
 `;
