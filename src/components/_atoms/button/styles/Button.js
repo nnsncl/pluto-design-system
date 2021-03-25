@@ -43,8 +43,6 @@ export const Body = styled(motion.button)`
     text-decoration: none;
     border: none;
     border-radius: 1.3rem;
-    /* color: ${neutral[80]};
-    background: ${neutral[100]}; */
     outline: none;
     cursor: pointer;
     transition: all ease-out .2s;

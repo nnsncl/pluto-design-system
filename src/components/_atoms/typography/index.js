@@ -15,7 +15,7 @@ import {
 } from './styles/Typography';
 
 /**
- * Typography can help create clear hierarchies, organize information, and guide users   * through a product or experience.
+ * Typography can help create clear hierarchies, organize information, and guide users through a product or experience.
  */
 
 export default function Typography({ children, modifiers }) {
