@@ -5,40 +5,84 @@ import { Body } from './styles/Button';
 /**
  * Buttons are used to initialize an action. Button labels express what action will
  * occur when the user interacts with it.
+ *
+ * **Best practices:** 
+ *
+ * - Define the hierarchy of buttons with different variants.
+ * - Button label must be short and understandable.
+ * - Provide an aria-label for buttons that don't contain text (e.g. icon buttons).
  */
-export default function Button({ modifier, label, ariaLabel, ...restProps }) {
+export default function Button({
+  modifiers,
+  'aria-label': ariaLabel,
+  as,
+  disabled,
+  onClick,
+  children,
+  ...restProps }) {
+
+  function handleKeyDown(e) {
+    if (disabled) return;
+    if (e.key === 'Enter' || e.key === ' ') onClick();
+  }
+
   return (
     <Body
-      modifiers={[modifier]}
-      type='button'
+      role='button'
+      tabIndex={0}
+      modifiers={modifiers}
+      as={as}
+      onKeyDown={handleKeyDown}
+      disabled={disabled}
+      onClick={!disabled ? onClick : null}
       aria-label={ariaLabel}
-      { ...restProps }
+      aria-disabled={disabled ? 'true' : 'false'}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      {...restProps}
     >
-      <span>{label}</span>
+      {children}
     </Body>
   );
 };
 
 Button.propTypes = {
+
   /**
-   * How large should the button be
+   * Specify Button variant, you can set multipe modifers to a single component.
+   * **Modifiers:**
+   * `small`, `medium`, `large`, `dark`, `light`, `secondary`
    */
-  modifier: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
+  modifiers: PropTypes.array.isRequired,
+
   /**
-   * Button contents
+  * Specify whether the Button should render as a link
+  */
+  as: PropTypes.oneOf(['a', 'Link']),
+
+  /**
+    * Specify whether the button should be disabled.
+  */
+  disabled: PropTypes.bool,
+
+  /**
+   * Button content
    */
-  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+
   /**
-   * aria-label have accessibility purpose, it must define the Component and its Action
+   * Define aria-label if the button isn't a prent of a text element.
    */
   ariaLabel: PropTypes.string.isRequired,
+
   /**
    * Optional click handler
    */
   onClick: PropTypes.func,
+
 };
 
 Button.defaultProps = {
-  modifier: 'medium',
+  modifiers: ['medium', 'secondary'],
   onClick: null,
 };
