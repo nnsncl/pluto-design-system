@@ -31,6 +31,15 @@ export const Container = styled.fieldset`
     ${(props) => props.disabled === true
         && (`opacity: 0.3;`)
     }
+
+    :focus-within {
+        div {
+            ${(props) => props.error === true
+                ? (`border: 2px solid ${primary.red[100]};`)
+                : (`border: 2px solid ${neutral[80]};`)
+            }
+        }
+    }
 `;
 
 export const Wrapper = styled.div`
