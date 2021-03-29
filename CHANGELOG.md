@@ -1,3 +1,5 @@
+# v0.2.1 (Thir Mon 29 2021)
+- Fix exports
 # v0.2.0 (Thir Mon 29 2021)
 - Add Accessibility controls for Inputs and Buttons
 - Add Framer motion
