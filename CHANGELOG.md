@@ -1,3 +1,9 @@
+
+# v0.2.0 (Thir Mon 29 2021)
+- Add Accessibility controls for Inputs and Buttons
+- Add Framer motion
+- Add Motion basis to Buttons
+- Add Modifiers to Atoms and Molecules
 # v0.1.4 (Thir Mar 18 2021)
 - Add Inputs atoms and Fields molecules
 - Fields include a password variant. It comes with a show/hide control on the value
