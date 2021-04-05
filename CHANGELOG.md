@@ -1,8 +1,10 @@
-# v0.3.0 (Thir Mon 29 2021)
-- Add Grid component
-# v0.2.1 (Thir Mon 29 2021)
+# v0.3.0 (Mon 5 Apr 2021)
 - Fix exports
-# v0.2.0 (Thir Mon 29 2021)
+# v0.3.0 (Thir Mar 29 2021)
+- Add Grid component
+# v0.2.1 (Thir Mar 29 2021)
+- Fix exports
+# v0.2.0 (Thir Mar 29 2021)
 - Add Accessibility controls for Inputs and Buttons
 - Add Framer motion
 - Add Motion basis to Buttons
