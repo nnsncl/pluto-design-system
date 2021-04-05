@@ -1,5 +1,5 @@
-export * from './components/_atoms/typography';
-export * from './components/_atoms/button';
+export { default as Typography } from './components/_atoms/typography';
+export { default as Button } from './components/_atoms/button';
 
-export * from './components/_molecules/text-field';
-export * from './components/_molecules/password-control';
+export { default as TextField }  from './components/_molecules/text-field';
+export { default as PasswordField } from './components/_molecules/password-control';
