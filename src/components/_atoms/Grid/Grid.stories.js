@@ -1,27 +1,27 @@
 import React from 'react';
 
-import { Grid, Row, Col } from './index';
+import Grid from './index'
 import Typography from '../typography/index';
 
 // eslint-disable-next-line
 export default {
     title: 'Atoms/Grid',
-    component: Col
+    component: Grid
 };
 
 const GridTemplate = (args) => {
     return (
         <Grid {...args} >
-            <Row responsiveDirection='medium' >
-                <Col size='1'>
+            <Grid.Row responsiveDirection='medium' >
+                <Grid.Col size='1'>
                     <Typography.Title100>Grid Column One.</Typography.Title100>
                     <Typography.Large>This column will be visible on every screen resolution.</Typography.Large>
-                </Col>
-                <Col size='1' collapse='small' >
+                </Grid.Col>
+                <Grid.Col size='1' collapse='small' >
                     <Typography.Title100>Grid Column Two.</Typography.Title100>
                     <Typography.Large>This column will collapse at 414px</Typography.Large>
-                </Col>
-            </Row>
+                </Grid.Col>
+            </Grid.Row>
         </Grid>
     );
 };
@@ -34,16 +34,16 @@ GridControls.args = {
 const RowTemplate = (args) => {
     return (
         <Grid>
-            <Row {...args}>
-                <Col size='1'>
+            <Grid.Row {...args}>
+                <Grid.Col size='1'>
                     <Typography.Title100>Grid Column One.</Typography.Title100>
                     <Typography.Large>This column will be visible on every screen resolution.</Typography.Large>
-                </Col>
-                <Col size='1' collapse='small' >
+                </Grid.Col>
+                <Grid.Col size='1' collapse='small' >
                     <Typography.Title100>Grid Column Two.</Typography.Title100>
                     <Typography.Large>This column will collapse at 414px</Typography.Large>
-                </Col>
-            </Row>
+                </Grid.Col>
+            </Grid.Row>
         </Grid>
     );
 };
@@ -56,16 +56,16 @@ RowControls.args = {
 const ColTemplate = (args) => {
     return (
         <Grid>
-            <Row responsiveDirection='medium' >
-                <Col {...args} >
+            <Grid.Row responsiveDirection='medium' >
+                <Grid.Col {...args} >
                     <Typography.Title100>Grid Column One.</Typography.Title100>
                     <Typography.Large>This column will be visible on every screen resolution.</Typography.Large>
-                </Col>
-                <Col size='1' collapse='small' >
+                </Grid.Col>
+                <Grid.Col size='1' collapse='small' >
                     <Typography.Title100>Grid Column Two.</Typography.Title100>
                     <Typography.Large>This column will collapse at 414px</Typography.Large>
-                </Col>
-            </Row>
+                </Grid.Col>
+            </Grid.Row>
         </Grid>
     );
 };

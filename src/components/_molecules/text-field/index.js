@@ -22,7 +22,8 @@ export default function TextField({
     error,
     onClick,
     modifiers,
-    children }) {
+    children,
+    restProps }) {
 
     return (
         <Container disabled={disabled} >
@@ -40,7 +41,9 @@ export default function TextField({
                     disabled={disabled}
                     required={required}
                     onClick={onClick}
+                    onChange={onChange}
                     autocomplete='on'
+                    {...restProps}
                 />
                 {children}
             </Wrapper>
@@ -120,5 +123,10 @@ TextField.propTypes = {
      * Optionally provide an onClick handler that is called whenever the input is clicked.
      */
     onClick: PropTypes.func,
+
+    /**
+     * Optionally provide an onChange handler that is called whenever the input value changes.
+     */
+    onChange: PropTypes.func,
 
 };
