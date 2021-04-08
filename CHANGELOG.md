@@ -1,4 +1,5 @@
-
+# v0.3.3 (Thir 8 Apr 2021)
+- Hotfix : Fields properties definition
 # v0.3.2 (Thir 8 Apr 2021)
 - Fix TextField properties
 - Update Grids structure
