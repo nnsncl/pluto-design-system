@@ -1,3 +1,8 @@
+
+# v0.3.2 (Thir 8 Apr 2021)
+- Fix TextField properties
+- Update Grids structure
+- Export Grids
 # v0.3.0 (Mon 5 Apr 2021)
 - Fix exports
 # v0.3.0 (Thir Mar 29 2021)
