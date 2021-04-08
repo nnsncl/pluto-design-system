@@ -18,8 +18,11 @@ export default function PasswordField({
     disabled,
     required,
     onClick,
+    onChange,
     modifiers,
-    error }) {
+    error,
+    restProps
+}) {
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -42,6 +45,8 @@ export default function PasswordField({
             value={value}
             type={isVisible ? 'text' : 'password'}
             modifiers={modifiers}
+            onChange={onChange}
+            {...restProps}
         >
             <ActionWrapper onClick={handleToggleVisibility} >
                 <Icon viewBox='0 0 48 48' >
@@ -117,6 +122,11 @@ PasswordField.propTypes = {
      * Optionally provide an onClick handler that is called whenever the input is clicked.
      */
     onClick: PropTypes.func,
+
+    /**
+    * Optionally provide an onChange handler that is called whenever the input value changes.
+    */
+    onChange: PropTypes.func,
 
 };
 

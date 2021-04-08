@@ -21,6 +21,7 @@ export default function TextField({
     required,
     error,
     onClick,
+    onChange,
     modifiers,
     children,
     restProps }) {
