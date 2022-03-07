@@ -36,7 +36,7 @@ const BUTTON_MODIFIERS = {
 
     secondary: () => `
         color: ${neutral[100]};
-        background: ${neutral[70]};
+        background: blue;
     `,
 
 }

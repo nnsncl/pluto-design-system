@@ -26,8 +26,6 @@ export const Small = styled.p`
 
 export const Label = styled.label`
     font-size: ${typeScale[30]};
-    line-height: 1.2em;
-    ${globalValues}
     ${applyStyleModifiers(TYPOGRAPHY_MODIFIERS)};
 `;
 
