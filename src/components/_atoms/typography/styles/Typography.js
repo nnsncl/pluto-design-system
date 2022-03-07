@@ -32,7 +32,7 @@ export const Label = styled.label`
 `;
 
 export const Body = styled.p`
-    font-size: ${typeScale[30]};
+    font-size: ${typeScale[10]};
     line-height: 1.2em;
     ${globalValues}
     ${applyStyleModifiers(TYPOGRAPHY_MODIFIERS)};
